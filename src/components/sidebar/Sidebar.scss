@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15px;
     height: 100vh;
     background-color: black;
     padding: 7px 15px;
@@ -28,6 +27,18 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+    }
+  }
+
+  .sidebarRight {
+    background-color: #2b2d33;
+
+    .sidebarTop {
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
     }
   }
 }
