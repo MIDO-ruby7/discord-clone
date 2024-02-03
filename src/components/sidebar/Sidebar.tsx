@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Sidebar.scss"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import AddIcon from '@mui/icons-material/Add';
+import SidebarChannele from './SidebarChannele';
 
 const Sidebar = () => {
   return (
@@ -17,6 +19,18 @@ const Sidebar = () => {
         <div className='sidebarTop'>
           <h3>KanzenniRikaishita</h3>
           <ExpandMoreIcon />
+        </div>
+        <div className='sidebarChanneles'>
+          <div className='sidebarChannelesHeader'>
+            <div className='sidebarHeader'>
+              <ExpandMoreIcon />
+              <h4>Reactチャンネル</h4>
+            </div>
+            <AddIcon className='sidebarAdIcon' />
+          </div>
+          <div className='sidebarChannelesList'>
+            <SidebarChannele />
+          </div>
         </div>
       </div>
     </div>

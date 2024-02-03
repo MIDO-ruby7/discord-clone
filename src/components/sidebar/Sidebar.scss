@@ -41,4 +41,19 @@
       padding: 20px;
     }
   }
+  .sidebarChanneles {
+    padding: 13px;
+
+    .sidebarChannelesHeader {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+      color: #ffffff;
+
+      .sidebarHeader {
+        display: flex;
+      }
+    }
+  }
+
 }
