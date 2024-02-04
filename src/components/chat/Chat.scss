@@ -2,6 +2,11 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  background-color: #33363b;
+
+  .chatMessage {
+    flex-grow: 1;
+  }
 
   .chatInput {
     display: flex;
