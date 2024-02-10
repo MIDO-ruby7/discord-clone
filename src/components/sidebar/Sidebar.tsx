@@ -7,8 +7,12 @@ import HeadphonesIcon from '@mui/icons-material/Headphones';
 import SettingsIcon from '@mui/icons-material/Settings';
 import SidebarChannele from './SidebarChannele';
 import { auth } from '../../firebase';
+import { useSelector } from 'react-redux';
+import { useAppSelector } from '../../app/hooks';
 
 const Sidebar = () => {
+  const user = useAppSelector((state) => state.user);
+
   return (
     <div className='sidebar'>
       <div className='sidebarLeft'>
@@ -38,10 +42,10 @@ const Sidebar = () => {
 
           <div className='sidebarFooter'>
             <div className='sidebarAccount'>
-              <img src='./favicon.ico' alt='' onClick={() => auth.signOut()}/>
+              <img src={user?.photo} alt='' onClick={() => auth.signOut()}/>
               <div className='accountName'>
-                <h4>kanzenniRikaishita</h4>
-                <span>#8162</span>
+                <h4>{user?.displayName}</h4>
+                <span>#{user?.uid.substring(0,4)}</span>
               </div>
             </div>
             <div className='sidebarVoice'>
